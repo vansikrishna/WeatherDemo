@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    tools:context=".activity.MainActivity">
+
+    <EditText
+        android:id="@+id/cityEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/text_size_16"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:hint="@string/city_hint"
+        android:imeOptions="actionDone"
+        android:inputType="textCapWords"
+        android:drawableRight="@drawable/ic_search_black_24dp" />
+
+    <LinearLayout
+        android:layout_below="@+id/cityEditText"
+        android:layout_above="@+id/dateLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_centerInParent="true"
+        android:id="@+id/centralLayout">
+        <ImageView
+            android:id="@+id/weatherStatusImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minWidth="@dimen/attr_size_100"
+            android:minHeight="@dimen/attr_size_100"
+            android:src="@drawable/ic_cloud_black_48dp"/>
+        <TextView
+            android:id="@+id/weatherStatusTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cloudy - 29 C"
+            android:textColor="#000000"
+            android:textSize="@dimen/text_size_30"/>
+        <LinearLayout
+            android:id="@+id/minTempLayout"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/attr_size_10">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/min_temp"
+                android:textColor="#000000"
+                android:textSize="@dimen/text_size_22"/>
+            <TextView
+                android:id="@+id/minTempTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" 25 C"
+                android:layout_marginLeft="@dimen/attr_size_20"
+                android:textColor="#000000"
+                android:textSize="@dimen/text_size_22"
+                android:textStyle="bold"/>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/maxTempLayout"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/attr_size_5">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/max_temp"
+                android:textColor="#000000"
+                android:textSize="@dimen/text_size_22"/>
+            <TextView
+                android:id="@+id/maxTempTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="35 C"
+                android:layout_marginLeft="@dimen/attr_size_20"
+                android:textColor="#000000"
+                android:textSize="@dimen/text_size_22"
+                android:textStyle="bold"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/dateLayout"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/last_updated"
+            android:textColor="#000000"
+            android:textSize="@dimen/text_size_15"/>
+        <TextView
+            android:id="@+id/updateTimeTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sun, 30 Jun 2016, 15:30"
+            android:textColor="#000000"
+            android:textSize="@dimen/text_size_15"
+            android:textStyle="bold"/>
+    </LinearLayout>
+</RelativeLayout>

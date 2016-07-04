@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">WeatherDemo</string>
+    <string name="open_weather_api_key">1fe22920e87a8d01a0d47e44ad84dcb4</string>
+    <string name="city_hint">Set your City here...</string>
+    <string name="min_temp">Min Temp</string>
+    <string name="max_temp">Max Temp</string>
+    <string name="last_updated">Last Updated On</string>
+
+    <string name="weather_sunny">&#xf00d;</string>
+    <string name="weather_clear_night">&#xf02e;</string>
+
+    <string name="weather_foggy">&#xf014;</string>
+    <string name="weather_cloudy">&#xf013;</string>
+    <string name="weather_rainy">&#xf019;</string>
+    <string name="weather_snowy">&#xf01b;</string>
+    <string name="weather_thunder">&#xf01e;</string>
+    <string name="weather_drizzle">&#xf01c;</string>
+</resources>
